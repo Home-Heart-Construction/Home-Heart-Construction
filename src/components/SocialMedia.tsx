@@ -115,7 +115,7 @@ export function SocialMedia() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
-                  className={`w-full max-w-[260px] lg:max-w-none group relative glass-card p-8 lg:p-10 flex flex-col items-center justify-center text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(200,164,106,0.15)] border-white/5 hover:border-gold/30 rounded-3xl ${isLastOdd ? 'sm:w-[260px] lg:w-full' : ''}`}
+                  className={`w-full max-w-[260px] aspect-square lg:aspect-auto lg:max-w-none group relative glass-card p-8 lg:p-10 flex flex-col items-center justify-center text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(200,164,106,0.15)] border-white/5 hover:border-gold/30 rounded-3xl ${isLastOdd ? 'sm:w-[260px] lg:w-full' : ''}`}
                 >
                   <div className="absolute inset-0 bg-gold blur-[50px] opacity-0 group-hover:opacity-[0.08] transition-opacity duration-300 pointer-events-none rounded-3xl"></div>
                   
