@@ -175,7 +175,7 @@ export function BeforeAfter() {
   );
 
   return (
-    <section id="before-after" className="relative py-32 overflow-hidden bg-primary-bg isolate">
+    <section id="before-after" className="relative py-16 md:py-32 overflow-hidden bg-primary-bg isolate">
       <Particles count={20} />
       <Glow className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
       

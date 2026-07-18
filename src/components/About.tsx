@@ -4,7 +4,7 @@ import { Particles } from './Particles';
 
 export function About() {
   return (
-    <section id="about" className="relative py-32 overflow-hidden bg-primary-bg isolate">
+    <section id="about" className="relative py-16 md:py-32 overflow-hidden bg-primary-bg isolate">
       <Particles count={30} />
       <Glow className="-top-20 -left-20" />
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-8 relative z-10">

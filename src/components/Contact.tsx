@@ -5,7 +5,7 @@ import { Particles } from './Particles';
 
 export function Contact() {
   return (
-    <section id="contact" className="py-32 bg-secondary-bg relative isolate overflow-hidden">
+    <section id="contact" className="py-16 md:py-32 bg-secondary-bg relative isolate overflow-hidden">
       <Particles count={35} />
       <Glow className="top-1/2 left-0 w-[600px] h-[600px] opacity-10" />
       

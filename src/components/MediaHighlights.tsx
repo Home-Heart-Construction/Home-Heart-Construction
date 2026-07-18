@@ -48,7 +48,7 @@ export function MediaHighlights() {
   }, [lightboxOpen]);
 
   return (
-    <section id="media-highlights" className="py-32 bg-primary-bg relative isolate overflow-hidden">
+    <section id="media-highlights" className="py-16 md:py-32 bg-primary-bg relative isolate overflow-hidden">
       <Particles count={25} />
       <Glow className="top-0 left-1/4 w-[600px] h-[600px] opacity-10" />
       <Glow className="bottom-0 right-1/4 w-[500px] h-[500px] opacity-5" />

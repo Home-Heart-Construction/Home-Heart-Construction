@@ -48,7 +48,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="relative py-32 bg-secondary-bg isolate overflow-hidden">
+    <section id="services" className="relative py-16 md:py-32 bg-secondary-bg isolate overflow-hidden">
       <Particles count={40} />
       <Glow className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-10" />
       
@@ -75,7 +75,7 @@ export function Services() {
           </motion.h3>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 md:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -83,22 +83,22 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="glass-card p-6 sm:p-8 group hover:-translate-y-2 hover:border-gold/30 transition-all duration-500 relative cursor-pointer"
+              className="glass-card rounded-[20px] sm:rounded-[24px] p-3 sm:p-6 md:p-8 group hover:-translate-y-2 hover:border-gold/30 transition-all duration-500 relative cursor-pointer flex flex-col"
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[20px] sm:rounded-[24px]"></div>
               
               <div className="relative z-10">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-gold/10 group-hover:border-gold/30 transition-all duration-500">
-                  <service.icon className="w-7 h-7 text-gold group-hover:scale-110 transition-transform duration-500" strokeWidth={1} />
+                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-3 sm:mb-6 group-hover:bg-gold/10 group-hover:border-gold/30 transition-all duration-500">
+                  <service.icon className="w-5 h-5 sm:w-7 sm:h-7 text-gold group-hover:scale-110 transition-transform duration-500" strokeWidth={1} />
                 </div>
                 
-                <h4 className="text-xl font-semibold mb-4 text-white group-hover:text-gold transition-colors duration-300">
+                <h4 className="text-[12px] sm:text-xl font-semibold mb-2 sm:mb-4 text-white group-hover:text-gold transition-colors duration-300 leading-tight">
                   {service.title}
                 </h4>
                 
-                <div className="w-12 h-[2px] bg-white/10 mb-4 group-hover:w-full group-hover:bg-gold transition-all duration-500"></div>
+                <div className="w-8 sm:w-12 h-[2px] bg-white/10 mb-2 sm:mb-4 group-hover:w-full group-hover:bg-gold transition-all duration-500"></div>
                 
-                <p className="text-text-muted text-sm leading-relaxed font-light">
+                <p className="text-text-muted text-[10px] sm:text-sm leading-relaxed sm:leading-relaxed font-light opacity-90">
                   {service.description}
                 </p>
               </div>

@@ -35,7 +35,7 @@ export function FAQ() {
   };
 
   return (
-    <section className="py-32 bg-primary-bg relative isolate overflow-hidden">
+    <section className="py-16 md:py-32 bg-primary-bg relative isolate overflow-hidden">
       <Particles count={30} />
       <Glow className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-10" />
       

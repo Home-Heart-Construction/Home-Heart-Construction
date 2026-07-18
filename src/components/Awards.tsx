@@ -37,7 +37,7 @@ export function Awards() {
   }, [selectedIndex]);
 
   return (
-    <section className="relative py-32 overflow-hidden bg-[#0A0A0B] isolate">
+    <section className="relative py-16 md:py-32 overflow-hidden bg-[#0A0A0B] isolate">
       {/* Luxury Charcoal Wall Texture & Vignette */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[#0A0A0B]"></div>
@@ -87,7 +87,7 @@ export function Awards() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center justify-center max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 gap-4 sm:gap-10 md:gap-16 lg:gap-20 items-center justify-center max-w-5xl mx-auto">
           {certificates.map((cert, index) => (
             <motion.div
               key={index}
@@ -99,7 +99,7 @@ export function Awards() {
               onClick={() => setSelectedIndex(index)}
             >
               {/* Wooden Frame styling */}
-              <div className="relative w-full aspect-[3/4] sm:aspect-auto sm:h-[320px] lg:h-[380px] bg-[#1A1108] rounded-sm shadow-[0_15px_40px_rgba(0,0,0,0.6),inset_0_0_15px_rgba(0,0,0,1)] transition-all duration-[400ms] ease-in-out group-hover:-translate-y-[6px] group-hover:scale-[1.02] group-hover:shadow-[0_25px_50px_rgba(200,164,106,0.15),inset_0_0_15px_rgba(0,0,0,1)] border-[10px] sm:border-[12px] border-[#2A1A10] p-1.5 sm:p-2 flex flex-col justify-center items-center overflow-hidden">
+              <div className="relative w-full aspect-[1.4] sm:aspect-auto sm:h-[320px] lg:h-[380px] bg-[#1A1108] rounded-sm shadow-[0_15px_40px_rgba(0,0,0,0.6),inset_0_0_15px_rgba(0,0,0,1)] transition-all duration-[400ms] ease-in-out group-hover:-translate-y-[6px] group-hover:scale-[1.02] group-hover:shadow-[0_25px_50px_rgba(200,164,106,0.15),inset_0_0_15px_rgba(0,0,0,1)] border-[10px] sm:border-[12px] border-[#2A1A10] p-1.5 sm:p-2 flex flex-col justify-center items-center overflow-hidden">
                 
                 {/* Frame texture overlay */}
                 <div className="absolute inset-0 opacity-40 pointer-events-none mix-blend-multiply bg-[linear-gradient(90deg,transparent_0%,rgba(0,0,0,0.4)_50%,transparent_100%)]"></div>

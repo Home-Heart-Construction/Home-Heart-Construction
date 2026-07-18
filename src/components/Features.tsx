@@ -38,7 +38,7 @@ const features = [
 
 export function Features() {
   return (
-    <section id="why-us" className="py-32 bg-secondary-bg relative isolate overflow-hidden">
+    <section id="why-us" className="py-16 md:py-32 bg-secondary-bg relative isolate overflow-hidden">
       <Particles count={35} />
       <Glow className="bottom-0 right-0 w-[600px] h-[600px] opacity-20" />
       

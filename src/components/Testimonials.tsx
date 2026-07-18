@@ -36,7 +36,7 @@ export function Testimonials() {
   }, []);
 
   return (
-    <section className="py-32 bg-primary-bg relative overflow-hidden isolate">
+    <section className="py-16 md:py-32 bg-primary-bg relative overflow-hidden isolate">
       <Particles count={25} />
       <Glow className="top-0 left-0 w-[500px] h-[500px] opacity-10" />
       <Glow className="bottom-0 right-0 w-[500px] h-[500px] opacity-10" />

@@ -124,7 +124,7 @@ export function Gallery() {
   };
 
   return (
-    <section id="projects" className="py-32 bg-[#0A0A0B] relative isolate overflow-hidden force-dark-vars">
+    <section id="projects" className="py-16 md:py-32 bg-[#0A0A0B] relative isolate overflow-hidden force-dark-vars">
       <Particles count={30} />
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
@@ -151,7 +151,7 @@ export function Gallery() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[200px] md:auto-rows-[250px] lg:auto-rows-[300px] gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -160,7 +160,7 @@ export function Gallery() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
               onClick={() => setSelectedIndex(index)}
-              className="relative rounded-[28px] md:rounded-[32px] overflow-hidden group cursor-pointer border border-white/5 bg-white/5 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_35px_rgba(200,164,106,0.15)] hover:border-gold/30"
+              className="relative aspect-[4/3] rounded-xl overflow-hidden group cursor-pointer border border-white/5 bg-white/5 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_35px_rgba(200,164,106,0.15)] hover:border-gold/30"
             >
               <img 
                 src={project.image} 
