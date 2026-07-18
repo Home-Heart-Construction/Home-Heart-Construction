@@ -109,7 +109,7 @@ export function Team() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
           {team.map((member, index) => (
             <motion.div
               key={index}
@@ -117,10 +117,10 @@ export function Team() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="glass-card rounded-[20px] p-6 flex flex-col items-center text-center group hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(200,164,106,0.15)] hover:border-gold/30 transition-all duration-500 relative overflow-hidden h-full"
+              className="glass-card rounded-[20px] p-3 sm:p-6 flex flex-col items-center text-center group hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(200,164,106,0.15)] hover:border-gold/30 transition-all duration-500 relative overflow-hidden h-full"
             >
               {/* Image Container with Glow */}
-              <div className="relative w-[150px] h-[150px] mb-5 rounded-full p-[2px] bg-gradient-to-b from-gold/60 to-gold/10 group-hover:from-gold group-hover:to-gold/40 shadow-[0_0_30px_rgba(200,164,106,0.15)] group-hover:shadow-[0_0_40px_rgba(200,164,106,0.3)] transition-all duration-500 mx-auto">
+              <div className="relative w-[90px] h-[90px] sm:w-[150px] sm:h-[150px] mb-3 sm:mb-5 rounded-full p-[2px] bg-gradient-to-b from-gold/60 to-gold/10 group-hover:from-gold group-hover:to-gold/40 shadow-[0_0_30px_rgba(200,164,106,0.15)] group-hover:shadow-[0_0_40px_rgba(200,164,106,0.3)] transition-all duration-500 mx-auto">
                 <div className="w-full h-full rounded-full overflow-hidden bg-[#111] relative z-10 shadow-[inset_0_4px_20px_rgba(0,0,0,0.8)] flex items-center justify-center">
                   <div className="w-full h-full transition-transform duration-700 group-hover:scale-[1.05]">
                     <img 
@@ -134,12 +134,12 @@ export function Team() {
               </div>
 
               {/* Text Content */}
-              <h4 className="text-xl font-bold text-white mb-1">{member.name}</h4>
-              <p className="text-gold text-xs font-medium tracking-wide uppercase mb-4">{member.position}</p>
+              <h4 className="text-[13px] sm:text-xl font-bold text-white mb-1 leading-tight">{member.name}</h4>
+              <p className="text-gold text-[9px] sm:text-xs font-medium tracking-wide uppercase mb-2 sm:mb-4">{member.position}</p>
               
-              <div className="w-[50px] h-[2px] bg-gold/50 group-hover:bg-gold transition-colors duration-300 mb-4"></div>
+              <div className="w-[30px] sm:w-[50px] h-[2px] bg-gold/50 group-hover:bg-gold transition-colors duration-300 mb-2 sm:mb-4"></div>
               
-              <p className="text-text-muted text-sm font-light leading-relaxed">
+              <p className="text-text-muted text-[10px] sm:text-sm font-light leading-snug sm:leading-relaxed">
                 {member.bio}
               </p>
             </motion.div>
