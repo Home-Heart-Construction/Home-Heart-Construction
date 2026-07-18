@@ -82,18 +82,18 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="group flex flex-col items-center text-center p-8 glass-card hover:-translate-y-2 transition-all duration-500 relative overflow-hidden"
+              className="group flex flex-col items-center text-center p-3 sm:p-6 lg:p-8 glass-card hover:-translate-y-2 transition-all duration-500 relative overflow-hidden rounded-2xl sm:rounded-3xl"
             >
               <div className="absolute inset-0 bg-gradient-to-b from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative z-10 flex flex-col items-center">
-                <div className="w-20 h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:border-gold/30 transition-all duration-500 relative">
+              <div className="relative z-10 flex flex-col items-center w-full">
+                <div className="w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-3 sm:mb-6 group-hover:scale-110 group-hover:border-gold/30 transition-all duration-500 relative">
                   <div className="absolute inset-0 rounded-full bg-gold/10 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <feature.icon className="w-8 h-8 text-gold relative z-10" strokeWidth={1} />
+                  <feature.icon className="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-gold relative z-10" strokeWidth={1} />
                 </div>
-                <h4 className="text-xl font-bold text-white mb-4 group-hover:text-gold transition-colors duration-300">
+                <h4 className="text-[10px] sm:text-base lg:text-xl font-bold text-white mb-1.5 sm:mb-4 group-hover:text-gold transition-colors duration-300 leading-tight w-full truncate whitespace-normal sm:whitespace-normal">
                   {feature.title}
                 </h4>
-                <p className="text-text-muted leading-relaxed font-light">
+                <p className="text-[8px] sm:text-xs lg:text-base text-text-muted leading-snug sm:leading-relaxed font-light">
                   {feature.description}
                 </p>
               </div>
