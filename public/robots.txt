@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://homeheart.in/sitemap.xml
+Sitemap: https://homeheart.in/image-sitemap.xml

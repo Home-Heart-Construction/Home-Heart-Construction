@@ -1,0 +1,15 @@
+export const mediaList = [
+  { id: 0, type: 'video', src: 'https://res.cloudinary.com/dbshx9xvx/video/upload/v1783677193/InShot_20260710_150953346_1_ke4ty6.mp4' },
+  { id: 1, type: 'video', src: 'https://res.cloudinary.com/dbshx9xvx/video/upload/v1783677177/InShot_20260710_150427068_1_omaoq7.mp4' },
+  { id: 2, type: 'image', src: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783674480/file_00000000a01871f58f203623d2e3191d_ncaujs.png' },
+  { id: 3, type: 'video', src: 'https://res.cloudinary.com/dbshx9xvx/video/upload/v1783677131/InShot_20260710_145837773_1_c02rdt.mp4' },
+  { id: 4, type: 'image', src: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783674478/IMG-20260709-WA0010_lhliwr.jpg' },
+  { id: 5, type: 'video', src: 'https://res.cloudinary.com/dbshx9xvx/video/upload/v1783674586/%E0%A4%97%E0%A4%AF%E0%A4%BE%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%B9%E0%A5%8B%E0%A4%AE_%E0%A4%B9%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%9F_%E0%A4%95%E0%A4%82%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B6%E0%A4%A8_%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%87%E0%A4%B5%E0%A5%87%E0%A4%9F_%E0%A4%B2%E0%A4%BF%E0%A4%AE%E0%A4%BF%E0%A4%9F%E0%A5%87%E0%A4%A1_%E0%A4%95%E0%A4%82%E0%A4%AA%E0%A4%A8%E0%A5%80_%E0%A4%95%E0%A4%BE_720P_aky9lv.mp4' },
+  { id: 6, type: 'image', src: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783674477/IMG-20260709-WA0004_ux0xch.jpg' },
+  { id: 7, type: 'video', src: 'https://res.cloudinary.com/dbshx9xvx/video/upload/v1783674552/%E0%A4%97%E0%A4%AF%E0%A4%BE_%E0%A4%B6%E0%A4%B9%E0%A4%B0_%E0%A4%95%E0%A5%87_%E0%A4%9A%E0%A4%B0%E0%A5%8D%E0%A4%9A%E0%A4%BF%E0%A4%A4_%E0%A4%AC%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%A1%E0%A4%B0_%E0%A4%A8%E0%A4%BE%E0%A4%B8%E0%A4%BF%E0%A4%B0_%E0%A4%96%E0%A4%BE%E0%A4%A8_%E0%A4%95%E0%A4%BE_%E0%A4%87%E0%A4%82%E0%A4%9F%E0%A4%B0%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A5%82__follerwelcome__gayajibihar__omair_xqrqwk.mp4' },
+  { id: 8, type: 'image', src: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783674475/IMG-20260709-WA0001_xp2bfu.jpg' },
+  { id: 9, type: 'video', src: 'https://res.cloudinary.com/dbshx9xvx/video/upload/v1783674521/VID-20260704-WA0030_gwxiv2.mp4' },
+  { id: 10, type: 'image', src: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783674475/IMG-20260704-WA0029_l5fmuf.jpg' },
+  { id: 11, type: 'video', src: 'https://res.cloudinary.com/dbshx9xvx/video/upload/v1783674506/VID-20260709-WA0013_tlntpb.mp4' },
+  { id: 12, type: 'image', src: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783674475/IMG-20260709-WA0002_hxasci.jpg' },
+];

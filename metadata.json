@@ -1,0 +1,6 @@
+{
+  "name": "HomeHeart",
+  "description": "Luxury Real Estate Landing Page for HomeHeart",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
