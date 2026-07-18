@@ -137,7 +137,7 @@ export function Team() {
               <h4 className="text-[13px] sm:text-xl font-bold text-white mb-1 leading-tight">{member.name}</h4>
               <p className="text-gold text-[9px] sm:text-xs font-medium tracking-wide uppercase mb-2 sm:mb-4">{member.position}</p>
               
-              <div className="w-[30px] sm:w-[50px] h-[2px] bg-gold/50 group-hover:bg-gold transition-colors duration-300 mb-2 sm:mb-4"></div>
+              
               
               <p className="text-text-muted text-[10px] sm:text-sm font-light leading-snug sm:leading-relaxed">
                 {member.bio}
