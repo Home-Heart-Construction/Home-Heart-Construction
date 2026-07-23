@@ -19,7 +19,7 @@ export function About() {
           >
             <div className="absolute inset-0 bg-gold/20 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity duration-700"></div>
             <img 
-              src="https://res.cloudinary.com/dbshx9xvx/image/upload/v1784101746/WhatsApp_Image_2026-07-14_at_10.25.32_PM_nhgdrr.jpg" 
+              src="https://res.cloudinary.com/dbshx9xvx/image/upload/v1783620718/WhatsApp_Image_2026-07-09_at_10.13.55_PMf_yxrb4l.jpg" 
               alt="Luxury Real Estate Exterior" 
               className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out"
             loading="lazy" decoding="async" />
@@ -35,7 +35,7 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="glass-card p-8 sm:p-10 md:p-14 rounded-[28px] md:rounded-[30px] relative"
+            className="glass-card px-8 py-6 sm:px-10 sm:py-8 md:px-14 md:py-10 rounded-[28px] md:rounded-[30px] relative"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 blur-[50px] rounded-full"></div>
             
@@ -49,15 +49,9 @@ export function About() {
               Dream <span className="text-gold-accent">Reality</span>
             </h3>
             
-            <div className="space-y-6 text-text-muted text-lg font-light leading-relaxed">
+            <div className="space-y-6 text-[#F5F5F2] text-lg font-light leading-relaxed">
               <p>
-                HomeHeart is a premium real estate development company dedicated to delivering thoughtfully designed residential projects with exceptional construction quality and modern architecture.
-              </p>
-              <p>
-                Our mission is to build homes that combine comfort, elegance, durability, and value for families looking for a better lifestyle.
-              </p>
-              <p>
-                From planning to execution, HomeHeart focuses on quality craftsmanship, transparent processes, timely delivery, and customer satisfaction.
+                Home Heart Construction was established in 2020 by Mr. Eng. Nasir Asrar, a first-generation entrepreneur with a vision to redefine quality construction and trusted real estate development. Headquartered in Patna, the company specializes in residential, commercial, and multi-story projects, delivering modern spaces that combine innovation, functionality, and long-lasting value. Since its inception, Home Heart Construction has steadily expanded its presence across Patna and Gaya, earning the trust of clients through superior craftsmanship, timely project delivery, and transparent business practices. Our experienced team is dedicated to maintaining the highest standards of quality while ensuring every project is executed with precision and attention to detail. We believe every building is more than just a structure—it is the foundation of dreams, businesses, and lasting relationships. Guided by integrity, innovation, and a customer-first approach, Home Heart Construction is committed to creating exceptional spaces that exceed expectations, deliver lasting value, and achieve complete customer satisfaction while building a legacy of trust, excellence, and reliability for generations to come.
               </p>
             </div>
             

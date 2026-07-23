@@ -11,18 +11,11 @@ const team = [
     imageStyle: { transform: 'scale(1.15) translateY(2%)' },
   },
   {
-    name: 'Shahid Hussain',
-    position: 'Document Controller',
-    image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783620717/WhatsApp_Image_2026-07-09_at_10.05.06_PMgh_zxud7i.jpg',
-    bio: 'Ensures accurate project documentation, compliance, and organized workflow throughout every development phase.',
-    imageStyle: { transform: 'scale(1.4) translateY(6%)' },
-  },
-  {
-    name: 'Aurenzeb Khan',
-    position: 'Logistics Manager',
-    image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783620717/WhatsApp_Image_2026-07-09_at_10.04.59_PMsf_uifsy0.jpg',
-    bio: 'Manages procurement, material coordination, and on-site logistics to keep projects running efficiently.',
-    imageStyle: { transform: 'scale(1.3) translateY(3%)' },
+    name: 'Manoj Tariyar',
+    position: 'Project Manager',
+    image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1784103350/WhatsApp_Image_2026-07-13_at_2.10.01_PM_s7hlrt.jpg',
+    bio: 'Coordinates project execution, manages timelines, supervises construction teams, and ensures successful delivery with the highest quality standards.',
+    imageStyle: { transform: 'scale(1.3) translateY(5%)' },
   },
   {
     name: 'Md Amin Akram',
@@ -39,14 +32,21 @@ const team = [
     imageStyle: { transform: 'scale(1.3) translateY(5%)' },
   },
   {
-    name: 'Manoj Manager',
-    position: 'Project Manager',
-    image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1784103350/WhatsApp_Image_2026-07-13_at_2.10.01_PM_s7hlrt.jpg',
-    bio: 'Coordinates project execution, manages timelines, supervises construction teams, and ensures successful delivery with the highest quality standards.',
+    name: 'Aurenzeb Khan',
+    position: 'Logistics Manager',
+    image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783620717/WhatsApp_Image_2026-07-09_at_10.04.59_PMsf_uifsy0.jpg',
+    bio: 'Manages procurement, material coordination, and on-site logistics to keep projects running efficiently.',
+    imageStyle: { transform: 'scale(1.3) translateY(3%)' },
+  },
+  {
+    name: 'Arvind Kumar',
+    position: 'Foreman',
+    image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1784103349/WhatsApp_Image_2026-07-13_at_2.09.29_PM_n5av1a.jpg',
+    bio: 'Leads construction crews, oversees daily site work, ensures proper workmanship, and supports efficient project execution from foundation to completion.',
     imageStyle: { transform: 'scale(1.3) translateY(5%)' },
   },
   {
-    name: 'Tusif Khan',
+    name: 'Tausif Khan',
     position: 'Supervisor',
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1784103350/WhatsApp_Image_2026-07-13_at_2.10.00_PM_ezsveu.jpg',
     bio: 'Supervises day-to-day site operations, workforce coordination, and maintains quality control throughout every construction stage.',
@@ -60,11 +60,11 @@ const team = [
     imageStyle: { transform: 'scale(1.3) translateY(5%)' },
   },
   {
-    name: 'Arvind Kumar',
-    position: 'Foreman',
-    image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1784103349/WhatsApp_Image_2026-07-13_at_2.09.29_PM_n5av1a.jpg',
-    bio: 'Leads construction crews, oversees daily site work, ensures proper workmanship, and supports efficient project execution from foundation to completion.',
-    imageStyle: { transform: 'scale(1.3) translateY(5%)' },
+    name: 'Shahid Hussain',
+    position: 'Document Controller',
+    image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783620717/WhatsApp_Image_2026-07-09_at_10.05.06_PMgh_zxud7i.jpg',
+    bio: 'Ensures accurate project documentation, compliance, and organized workflow throughout every development phase.',
+    imageStyle: { transform: 'scale(1.4) translateY(6%)' },
   }
 ];
 
@@ -109,14 +109,50 @@ export function Team() {
           </motion.p>
         </div>
 
+        {/* Director Section */}
+        <div className="flex justify-center mb-10 sm:mb-14 md:mb-16">
+          <div className="w-[calc(50%-6px)] sm:w-[calc(50%-12px)] md:w-[calc(50%-16px)] lg:w-[calc(25%-24px)]">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0, ease: [0.22, 1, 0.36, 1] }}
+              className="glass-card rounded-[20px] p-3 sm:p-6 flex flex-col items-center text-center group hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(200,164,106,0.15)] hover:border-gold/30 transition-all duration-500 relative overflow-hidden h-full"
+            >
+              {/* Image Container with Glow */}
+              <div className="relative w-[90px] h-[90px] sm:w-[150px] sm:h-[150px] mb-3 sm:mb-5 rounded-full p-[2px] bg-gradient-to-b from-gold/60 to-gold/10 group-hover:from-gold group-hover:to-gold/40 shadow-[0_0_30px_rgba(200,164,106,0.15)] group-hover:shadow-[0_0_40px_rgba(200,164,106,0.3)] transition-all duration-500 mx-auto">
+                <div className="w-full h-full rounded-full overflow-hidden bg-[#111] relative z-10 shadow-[inset_0_4px_20px_rgba(0,0,0,0.8)] flex items-center justify-center">
+                  <div className="w-full h-full transition-transform duration-700 group-hover:scale-[1.05]">
+                    <img 
+                      src={team[0].image} 
+                      alt={team[0].name}
+                      style={team[0].imageStyle}
+                      className="w-full h-full object-contain object-center"
+                    loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Text Content */}
+              <h4 className="text-[13px] sm:text-xl font-bold text-white mb-1 leading-tight">{team[0].name}</h4>
+              <p className="text-gold text-[9px] sm:text-xs font-medium tracking-wide uppercase mb-2 sm:mb-4">{team[0].position}</p>
+              
+              <p className="text-text-muted text-[10px] sm:text-sm font-light leading-snug sm:leading-relaxed">
+                {team[0].bio}
+              </p>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Rest of the Team */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
-          {team.map((member, index) => (
+          {team.slice(1).map((member, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.5, delay: (index + 1) * 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="glass-card rounded-[20px] p-3 sm:p-6 flex flex-col items-center text-center group hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(200,164,106,0.15)] hover:border-gold/30 transition-all duration-500 relative overflow-hidden h-full"
             >
               {/* Image Container with Glow */}
@@ -136,8 +172,6 @@ export function Team() {
               {/* Text Content */}
               <h4 className="text-[13px] sm:text-xl font-bold text-white mb-1 leading-tight">{member.name}</h4>
               <p className="text-gold text-[9px] sm:text-xs font-medium tracking-wide uppercase mb-2 sm:mb-4">{member.position}</p>
-              
-              
               
               <p className="text-text-muted text-[10px] sm:text-sm font-light leading-snug sm:leading-relaxed">
                 {member.bio}

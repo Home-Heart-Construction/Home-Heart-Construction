@@ -1,0 +1,10 @@
+Final Home Heart Website Update
+
+- About Us content updated
+- Director image replaced
+- About Us UI refined
+- Team hierarchy improved
+- Responsive team layout updated
+- Team member order reorganized
+- Team member names corrected
+- Final UI polish and optimization
