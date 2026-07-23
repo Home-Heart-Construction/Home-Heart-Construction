@@ -59,6 +59,11 @@ const projects = [
     id: 11,
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1784302367/Building_under_construction_raw_RCC_202607151447_ca1lum.jpg',
     alt: 'HomeHeart Building Under Construction',
+  },
+  {
+    id: 12,
+    image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1784786839/WhatsApp_Image_2026-07-23_at_12.35.46_AM_tapho3.jpg',
+    alt: 'HomeHeart New Portfolio Project',
   }
 ];
 
