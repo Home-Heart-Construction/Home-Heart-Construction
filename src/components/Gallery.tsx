@@ -9,76 +9,121 @@ const projects = [
     id: 1,
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1784107061/WhatsApp_Image_2026-07-15_at_2.38.47_PM_kezcqn.jpg',
     alt: 'HomeHeart Premium Exterior View',
+    category: 'Completed'
   },
   {
     id: 2,
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783685412/Use_the_provided_building_imag_9_ijxmf4.jpg',
     alt: 'HomeHeart Building Architectural Render',
+    category: 'Ongoing'
   },
   {
     id: 3,
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783685417/Architectural_visualization_luxu__2K_202607101739_sc5moi.jpg',
     alt: 'Luxury Architectural Visualization of HomeHeart Project',
+    category: 'Ongoing'
   },
   {
     id: 4,
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783674475/IMG-20260709-WA0001_xp2bfu.jpg',
     alt: 'HomeHeart Modern Building Facade',
+    category: 'Completed'
   },
   {
     id: 5,
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1784302692/WhatsApp_Image_2026-07-17_at_9.06.43_PM_de0tsx.jpg',
     alt: 'HomeHeart Residential Complex Night View',
+    category: 'Ongoing'
   },
   {
     id: 6,
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783620756/c1_be38jy.jpg',
     alt: 'HomeHeart Project Landscaped Amenities',
+    category: 'Completed'
   },
   {
     id: 7,
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1784302689/WhatsApp_Image_2026-07-17_at_9.06.43_PMGYF_zuneeu.jpg',
     alt: 'HomeHeart Luxury Apartment Balcony View',
+    category: 'Completed'
   },
   {
     id: 8,
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783620773/1_ctlc88.jpg',
     alt: 'HomeHeart Architectural Details and Structure',
+    category: 'Completed'
   },
   {
     id: 9,
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783620747/s2_1_lszp8f.jpg',
     alt: 'HomeHeart Project Additional View',
+    category: 'Completed'
   },
   {
     id: 10,
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1783620775/3_u7fvwn.jpg',
     alt: 'HomeHeart Project View',
+    category: 'Completed'
   },
   {
     id: 11,
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1784302367/Building_under_construction_raw_RCC_202607151447_ca1lum.jpg',
     alt: 'HomeHeart Building Under Construction',
+    category: 'Ongoing'
   },
   {
     id: 12,
     image: 'https://res.cloudinary.com/dbshx9xvx/image/upload/v1784786839/WhatsApp_Image_2026-07-23_at_12.35.46_AM_tapho3.jpg',
     alt: 'HomeHeart New Portfolio Project',
+    category: 'Ongoing'
+  },
+  {
+    id: 13,
+    image: 'https://res.cloudinary.com/gl5qjsyd/image/upload/v1785389385/WhatsApp_Image_2026-07-23_at_12.35.46_AM_aigcys.jpg',
+    alt: 'HomeHeart Completed Project View 1',
+    category: 'Completed'
+  },
+  {
+    id: 14,
+    image: 'https://res.cloudinary.com/gl5qjsyd/image/upload/v1785389385/WhatsApp_Image_2026-07-23_at_12.35.45_AM_ngsrza.jpg',
+    alt: 'HomeHeart Completed Project View 2',
+    category: 'Completed'
+  },
+  {
+    id: 15,
+    image: 'https://res.cloudinary.com/gl5qjsyd/image/upload/v1785389373/WhatsApp_Image_2026-07-23_at_12.36.04_AM_fzxw9z.jpg',
+    alt: 'HomeHeart Completed Project View 3',
+    category: 'Completed'
+  },
+  {
+    id: 16,
+    image: 'https://res.cloudinary.com/gl5qjsyd/image/upload/v1785389373/WhatsApp_Image_2026-07-23_at_12.36.50_AM_tafwum.jpg',
+    alt: 'HomeHeart Completed Project View 4',
+    category: 'Completed'
   }
 ];
 
 export function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [filter, setFilter] = useState<'All' | 'Ongoing' | 'Completed'>('All');
+
+  const filteredProjects = React.useMemo(() => 
+    projects.filter(p => filter === 'All' || p.category === filter), 
+  [filter]);
 
   const handlePrevious = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation();
-    setSelectedIndex((prev) => (prev !== null ? (prev === 0 ? projects.length - 1 : prev - 1) : null));
-  }, []);
+    setSelectedIndex((prev) => (prev !== null ? (prev === 0 ? filteredProjects.length - 1 : prev - 1) : null));
+  }, [filteredProjects.length]);
 
   const handleNext = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation();
-    setSelectedIndex((prev) => (prev !== null ? (prev === projects.length - 1 ? 0 : prev + 1) : null));
-  }, []);
+    setSelectedIndex((prev) => (prev !== null ? (prev === filteredProjects.length - 1 ? 0 : prev + 1) : null));
+  }, [filteredProjects.length]);
+
+  useEffect(() => {
+    setSelectedIndex(null);
+  }, [filter]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -132,7 +177,7 @@ export function Gallery() {
     <section id="projects" className="py-16 md:py-32 bg-[#0A0A0B] relative isolate overflow-hidden force-dark-vars">
       <Particles count={30} />
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -154,10 +199,31 @@ export function Gallery() {
               Featured <span className="text-gold-accent">Projects</span>
             </motion.h3>
           </div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap items-center gap-2 sm:gap-3 bg-black/40 p-1.5 rounded-[100px] border border-white/10 backdrop-blur-md"
+          >
+            {(['All', 'Ongoing', 'Completed'] as const).map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`px-5 py-2 sm:px-6 sm:py-2.5 rounded-[100px] text-xs sm:text-sm font-semibold transition-all duration-300 ${
+                  filter === cat 
+                    ? 'bg-gold text-black shadow-[0_4px_15px_rgba(200,164,106,0.3)]' 
+                    : 'text-text-muted hover:text-white hover:bg-white/5'
+                }`}
+              >
+                {cat} Projects
+              </button>
+            ))}
+          </motion.div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -222,8 +288,8 @@ export function Gallery() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <img 
-                  src={projects[selectedIndex].image} 
-                  alt={projects[selectedIndex].alt}
+                  src={filteredProjects[selectedIndex].image} 
+                  alt={filteredProjects[selectedIndex].alt}
                   loading="lazy"
                   decoding="async"
                   onLoad={(e) => {
