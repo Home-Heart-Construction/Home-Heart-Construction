@@ -204,19 +204,19 @@ export function Gallery() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex flex-wrap items-center gap-2 sm:gap-3 bg-black/40 p-1.5 rounded-[100px] border border-white/10 backdrop-blur-md"
+            className="flex flex-nowrap w-full sm:w-auto items-center justify-between gap-1 sm:gap-3 bg-black/40 p-1.5 rounded-[100px] border border-white/10 backdrop-blur-md"
           >
             {(['All', 'Ongoing', 'Completed'] as const).map((cat) => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-5 py-2 sm:px-6 sm:py-2.5 rounded-[100px] text-xs sm:text-sm font-semibold transition-all duration-300 ${
+                className={`flex-1 sm:flex-none px-1 min-[375px]:px-2 py-2 sm:px-6 sm:py-2.5 rounded-[100px] text-[11px] min-[375px]:text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap text-center ${
                   filter === cat 
                     ? 'bg-gold text-black shadow-[0_4px_15px_rgba(200,164,106,0.3)]' 
                     : 'text-text-muted hover:text-white hover:bg-white/5'
                 }`}
               >
-                {cat} Projects
+                {cat === 'All' ? 'All Projects' : cat}
               </button>
             ))}
           </motion.div>
